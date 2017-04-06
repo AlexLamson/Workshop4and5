@@ -19,7 +19,7 @@ export default class FeedItem extends React.Component {
     });
   }
 
-    /**
+  /**
    * Triggered when the user clicks on the 'like' or 'unlike' button.
    */
   handleLikeClick(clickEvent) {
@@ -132,7 +132,7 @@ export default class FeedItem extends React.Component {
                 data.comments.map((comment, i) => {
                   // i is comment's index in comments array
                   return (
-                    <Comment key={i} author={comment.author} postDate={comment.postDate}>{comment.contents}</Comment>
+                    <Comment key={i} index={i} feedItemIndex={this.state._id} author={comment.author} postDate={comment.postDate} data={comment}>{comment.contents}</Comment>
                   );
                 })
               }
